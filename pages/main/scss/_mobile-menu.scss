@@ -1,0 +1,159 @@
+
+.page-header__top.active .page-header__nav {
+    transform: translateX(0);
+    pointer-events: auto;
+    // z-index: 10;
+    cursor: pointer;
+}
+
+
+.page-header__nav {
+    @include respond(phone) {
+        position: fixed;
+        width: 32rem;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        transform: translateX(320px);
+        pointer-events: none;
+        transition: transform 0.3s;
+        z-index: 10;
+    }
+}
+
+.page-header__nav::before {
+    @include respond(phone) {
+        content: '';
+        position: absolute;
+            top: 0;
+            bottom: 0;
+        right: 100%;
+        width: 150%;
+        background-color: rgba(41, 41, 41, 0.6);
+        z-index: -1;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+.page-header__top.active .page-header__nav::before {
+    opacity: 1;
+}
+
+.page-header__top.active .page-header__inner {
+    @include respond(phone) {
+        background-color: #292929;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.page-header__top.active .page-header__nav-link_pets {
+    color: #CDCDCD;
+}
+
+.page-header__top.active .pets-humburger span {
+    background-color: #fff;
+}
+
+.page-header__top.active .pets-humburger span {
+    background-color: #F1CDB3;
+}
+
+
+.humburger {
+    width: 3rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+    span {
+        background-color: #F1CDB3;
+        display: inline-block;
+        height: 0.2rem;
+        width: 100%;
+        position: relative;
+    }
+
+    @include respond(tabdesk) {
+        display: none;
+    }
+
+    @include respond(phone) {
+        z-index: 10;
+    }
+
+}
+
+.page-header__top.active .pets-humburger span::before {
+    border-top: 2px solid #F1CDB3;
+}
+
+.page-header__top.active .pets-humburger span::after {
+    border-top: 2px solid #F1CDB3;
+}
+
+.humburger span::before,
+.humburger span::after {
+    content: '';
+    position: absolute;
+    border-top: 2px solid #F1CDB3;
+    left: 0;
+    right: 0;
+}
+
+.humburger span::before {
+    top: -8px;
+}
+
+.humburger span::after {
+    top: 8px;
+}
+
+.page-header__top.active .humburger {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.pets-humburger span {
+    background-color: #000000;
+}
+
+.pets-humburger span::before,
+.pets-humburger span::after {
+    border-top: 2px solid #000000;
+}
+
+.active .site-logo_light .site-logo__heading {
+    color: #F1CDB3;
+}
+
+.active .site-logo_light .site-logo__sub {
+    color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    transition: 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.overlay.open {
+    pointer-events: all;
+    opacity: 1;
+}

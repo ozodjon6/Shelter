@@ -1,0 +1,120 @@
+ /* page-sec__donation */
+
+ .page-section__donation {
+     background-color: #F6F6F6;
+
+     @include respond(phone) {
+       padding-right: 1rem;
+       padding-left: 1rem;
+     }
+ }
+
+ .donation {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     @include respond(tablet) {
+        flex-direction: column-reverse;
+     }
+
+     @include respond(phone) {
+       text-align: center;
+     }
+ }
+
+ .donation__content {
+     margin-left: 30px;
+     display: flex;
+     align-items: flex-start;
+     flex-direction: column;
+     @include respond(tablet) {
+       margin-left: 0;
+       margin-bottom: 6rem;
+     }
+
+     @include respond(tabonly) {
+       width: 38rem;
+     }
+
+     @include respond(phone) {
+       padding-right: 1rem;
+       padding-left: 1rem;
+       margin-bottom: 4.2rem;
+       align-items: center;
+     }
+ }
+
+ .donation__pic{
+     width: 505px;
+     height: 261px;
+     flex-shrink: 0;
+
+     @include respond(phone) {
+       width: 26rem;
+       height: 13.5rem;
+     }
+ }
+
+ .donation__title {
+     margin-bottom: 20px;
+     text-align: left;
+     @include respond(phone) {
+       font-size: 2.5rem;
+     }
+ }
+
+ .donation__name {
+     font-size: 15px;
+     color: #545454;
+     margin-bottom: 20px;
+     letter-spacing: 0.9px;
+
+     @include respond(phone) {
+       letter-spacing: normal;
+     }
+ }
+
+ .donation__card {
+     background: #F1CDB3;
+     border-radius: 9px;
+     padding: 10px 15px;
+     margin-bottom: 20px;
+     cursor: pointer;
+     transition: all .3s;
+ }
+
+ .donation__card:hover {
+      background-color: #FDDCC4;
+ }
+
+ .donation__card-icon {
+     width: 30px;
+     height: 23px;
+     flex-shrink: 0;
+     margin-right: 15px;
+ }
+
+ .donation__card-number {
+     color: $text-color;
+     font-size: 20px;
+     letter-spacing: 1.2px;
+
+     @include respond(phone) {
+         font-size: 1.5rem;
+         letter-spacing: 0.8px;
+     }
+ }
+
+ .donation__text {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     font-style: italic;
+     color: #B2B2B2;
+     line-height: 1.5;
+     max-width: 359px;
+
+     @include respond(phone) {
+       text-align: left;
+     }
+ }

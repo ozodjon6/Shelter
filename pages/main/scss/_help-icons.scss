@@ -1,0 +1,94 @@
+.page-section__shelter {
+    @include respond(phone) {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+.help-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.help-icons__title {
+    margin-bottom: 60px;
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+        margin-bottom: 4.2rem;
+    }
+}
+
+.help-icons__list {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(desktop) {
+        margin-right: -120px;
+        margin-bottom: -55px;
+    }
+
+    @include respond(tabonly) {
+        margin-right: -6rem;
+    }
+
+    @include respond(phone) {
+        margin-bottom: -3rem;
+        justify-content: flex-start;
+    }
+}
+
+.help-icons__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 55px;
+
+    @include respond(desktop) {
+        margin-right: 120px;
+    }
+
+    @include respond(tabonly) {
+        margin-right: 6rem;
+        flex: 0 0 22.2%;
+    }
+
+    @include respond(phone) {
+        width: calc((100% - 30px) / 2);
+        margin-bottom: 3rem;
+    }
+}
+
+.help-icons__item:nth-child(odd) {
+    @include respond(phone) {
+        margin-right: 3rem;
+    }
+}
+
+
+.help-icons__pic {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+
+    // @include respond(phone) {
+    //   width: 5rem;
+    //   height: 5rem;
+    //   margin-bottom: 2rem;
+    // }
+}
+
+.help-icons__name {
+    color: $text-color;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
+}

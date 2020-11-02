@@ -1,0 +1,99 @@
+//Container widths
+$sm-container-width: 728px;
+$smm-container-width: 1024px;
+// $md-container-width: 1280px;
+$md-container-width: 1024px;
+$lg-container-width: 1240px;
+$lg-xl-container-width: 1290px;
+$lg-container-width-sidebar: 986px;
+$lg-xl-container-width-sidebar: 1026px;
+$desktop-xl-width: 1300px;
+// $desktop-width: 1280px;
+//Where desktop begins
+// $desktop-widths: '(min-width: 1281px)';
+//$desktop-widths: '(min-width: 1250px)';
+$mobilemini: '(min-width: 640px)';
+$mobile: '(max-width: 639px)';
+$lgds: '(min-width: 1024px)';
+$lgdsf: '(min-width: 1440px)';
+$mobileonly: '(max-width: 767px)';
+$desk: '(max-width: 1062px)';
+$desklg: '(min-width: 1063px)';
+// Max width where tablet is still affect finishes
+$mobtabonly: '(max-width: 1279px)';
+$tabonly: '(min-width:768px) and (max-width: 1279px)';
+$porttab: '(min-width:768px) and (max-width: 800px)';
+$landtab: '(min-width:1024px) and (max-width: 1279px)';
+$tabdeskonly: '(min-width: 768px)';
+$tabdesk: '(max-width: 767px)';
+//where desktop begins
+// $deskonly: '(min-width: 1250px) and (max-width:1299px)';
+$deskonly: '(min-width: 1280px)';
+
+@mixin adaptive($breakpoint) {
+  @media #{$breakpoint} {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    // @media (max-width: 1200px) {
+    @media #{$mobtabonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobilemini {
+    @media #{$mobilemini} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media #{$mobileonly} {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == tabonly {
+    @media #{$tabonly} {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == porttab {
+    @media #{$porttab} {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == landtab {
+    @media #{$landtab} {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == tabdesk {
+    @media #{$tabdeskonly} {
+      @content;
+    }
+  }
+  
+  @if $breakpoint == desktop {
+    @media #{$deskonly} {
+      @content;
+    }
+  }
+}
+
+
+@mixin reg {
+  font-family: "pt_sansregular", sans-serif;
+  font-weight: 400;
+}
+
+@mixin bold {
+  font-family: "pt_sansbold", sans-serif;
+  font-weight: 700;
+}
