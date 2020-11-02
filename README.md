@@ -1,2 +1,2 @@
 # Shelter
-[Shelter Responsive (HTML/CSS/Javascript)](https://github.com/ozodjon6/shelter)
+[Shelter Responsive (HTML/CSS/Javascript)](https://ozodjon6.github.io/Shelter/pages/main/index.html)
